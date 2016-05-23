@@ -53,9 +53,11 @@ public class PlayerPanel extends JPanel {
 	 */
 	public void synchronize(Player player) {
 		for(int card=0; card<player.hand.length; card++) {
-			info[card+1].setIcon(player.hand[card].image);
-			info[card+1].setText("");
-			//info[card+1].setText(player.hand[card].toString());
+			// Displays images instead of text for each card.
+			//info[card+1].setIcon(player.hand[card].image);
+			//info[card+1].setText("");
+			// Displays text instead of an image for each card
+			info[card+1].setText(player.hand[card].toString());
 		}
 		info[0].setText("Sum = " + player.valueOf());
 	}
